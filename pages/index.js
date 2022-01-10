@@ -1,8 +1,12 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Banner from '../Components/Banner'
 import Header from '../Components/Header'
+import ImageCard from '../Components/ImageCard'
+import Place from '../Components/place'
 
-export default function Home() {
+export default function Home({places, images}) {
+
   return (
     <div className=''>
       <Head>
@@ -13,7 +17,43 @@ export default function Home() {
 
      <Header/>
       <Banner/>
-      {/* Banner  */}
+
+      <main className='max-w-5xl mx-auto px-8 sm:px-17 '>
+        <section className='pt-6'>
+          <h2 className='text-4xl font-semibold'>Explore Nearby</h2>
+         
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+          {places?.map(place => <Place 
+          key={place._id}
+          place = {place}
+          /> )}
+          </div>
+        </section>
+        <section>
+          <h2 className='text-4xl font-semibold py-8'>Explore Places & Live Anywhere</h2>
+          <div className='flex space-x-3 overflow-scroll scrollbar-hide  p-3 -ml-3'>
+            {
+              images?.map(image => <ImageCard 
+                key={image._id}
+                image = {image}
+              /> )
+            }
+          </div>
+        </section>
+      </main>
     </div>
   )
+}
+
+export async function getStaticProps(){
+  const places = await fetch('https://whispering-tundra-09529.herokuapp.com/places').then(res =>res.json());
+
+  const images = await fetch('https://whispering-tundra-09529.herokuapp.com/images').then(res=> res.json())
+
+  return {
+    props:{
+      places,
+      images
+    }
+  }
 }
