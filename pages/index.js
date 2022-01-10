@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Banner from '../Components/Banner'
+import Footer from '../Components/Footer'
+import FooterBanner from '../Components/FooterBanner'
 import Header from '../Components/Header'
 import ImageCard from '../Components/ImageCard'
 import Place from '../Components/place'
@@ -40,7 +42,11 @@ export default function Home({places, images}) {
             }
           </div>
         </section>
+        <FooterBanner/>
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   )
 }
