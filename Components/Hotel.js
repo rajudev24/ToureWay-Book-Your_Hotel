@@ -13,6 +13,7 @@ const Hotel = (props) => {
                     layout='fill'
                     objectFit='cover'
                     alt='img'
+                    priority='true'
                     className='rounded-xl '
                 />
             </div>

@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { useRouter } from 'next/router';
 import React from 'react';
 import Footer from '../Components/Footer';
-import GoogleMap from '../Components/GoogleMap';
+
 import Header from '../Components/Header';
 import Hotel from '../Components/Hotel';
 
@@ -42,9 +42,7 @@ const Search = ({hotels}) => {
                         }
                     </div>
                 </section>
-                <section className='min-w-[600px]'>
-                    <GoogleMap/>
-                </section>
+                
             </main>
 
             <Footer />
