@@ -4,7 +4,7 @@ import React from 'react';
 import Footer from '../Components/Footer';
 import GoogleMap from '../Components/GoogleMap';
 import Header from '../Components/Header';
-import Hotel from '../Components/hotel';
+import Hotel from '../Components/Hotel';
 
 const Search = ({hotels}) => {
     

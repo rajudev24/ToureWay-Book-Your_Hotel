@@ -5,7 +5,8 @@ import Footer from '../Components/Footer'
 import FooterBanner from '../Components/FooterBanner'
 import Header from '../Components/Header'
 import ImageCard from '../Components/ImageCard'
-import Place from '../Components/place'
+import Place from '../Components/Place'
+
 
 export default function Home({ places, images }) {
 
