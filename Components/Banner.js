@@ -11,7 +11,7 @@ const Banner = () => {
             />
             <div className='absolute top-1/2 w-full text-center text-white '>
                 <p className=' sm:text-lg md:text-5xl font-bold'>The journey is my home</p>
-                <button className='text-purple-500 bg-white px-8 py-3 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150'>I'm Ready</button>
+                <button className='text-purple-500 bg-white px-8 py-3 shadow-md rounded-full font-bold my-3 hover:shadow-xl active:scale-90 transition duration-150'>I`m Ready</button>
             </div>
         </div>
     );
